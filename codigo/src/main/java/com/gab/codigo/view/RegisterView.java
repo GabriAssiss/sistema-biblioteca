@@ -47,7 +47,7 @@ public class RegisterView extends javax.swing.JFrame {
 
         jButton1.setText("Cadastrar");
 
-        jLabel1.setText("Nome");
+        jLabel1.setText("Nome de Usuário");
 
         jLabel2.setText("CPF");
 
@@ -72,13 +72,10 @@ public class RegisterView extends javax.swing.JFrame {
                             .addComponent(jTextField1, javax.swing.GroupLayout.DEFAULT_SIZE, 240, Short.MAX_VALUE)
                             .addComponent(jFormattedTextField1)
                             .addComponent(jPasswordField1)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel1)
-                                    .addComponent(jButton1)
-                                    .addComponent(jLabel2)
-                                    .addComponent(jLabel3))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
+                            .addComponent(jLabel1)
+                            .addComponent(jButton1)
+                            .addComponent(jLabel2)
+                            .addComponent(jLabel3))
                         .addGap(71, 71, 71)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)
