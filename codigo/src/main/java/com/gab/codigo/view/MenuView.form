@@ -71,7 +71,7 @@
         </Component>
         <Component class="javax.swing.JToggleButton" name="jToggleButton1">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Listar livros cadastrados"/>
+            <Property name="text" type="java.lang.String" value="Mostrar Livros"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="jButton2">

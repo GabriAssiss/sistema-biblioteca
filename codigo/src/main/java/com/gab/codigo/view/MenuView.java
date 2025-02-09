@@ -35,7 +35,7 @@ public class MenuView extends javax.swing.JFrame {
 
         jButton1.setText("Cadastrar livros");
 
-        jToggleButton1.setText("Listar livros cadastrados");
+        jToggleButton1.setText("Mostrar Livros");
 
         jButton2.setText("Voltar");
 
