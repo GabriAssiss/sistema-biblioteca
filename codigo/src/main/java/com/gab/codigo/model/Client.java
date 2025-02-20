@@ -8,6 +8,6 @@ package com.gab.codigo.model;
  *
  * @author eduar
  */
-public class Register {
+public class Client {
     
 }
