@@ -18,7 +18,7 @@ public class Demand {
     private int idDemand; 
 
     public Demand(LocalDate dataPedido, Client client, Book loan, int idDemand) {
-        this.dataPedido = dataPedido;
+        this.dataPedido = dataPedido.now();
         this.dataExpiracao = dataPedido.plusDays(14);
         this.client = client;
         this.loan = loan;
