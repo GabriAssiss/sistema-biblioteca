@@ -9,5 +9,17 @@ package com.gab.codigo.model;
  * @author eduar
  */
 public class Client {
-    
+   private String nome;
+   private String email;
+   private String telefone;
+   private int idClient;
+   private Adress adress;
+
+    public Client(String nome, String email, String telefone, int idClient, Adress adress) {
+        this.nome = nome;
+        this.email = email;
+        this.telefone = telefone;
+        this.idClient = idClient;
+        this.adress = adress;
+    }
 }

@@ -15,13 +15,15 @@ public class Book {
     private String author;
     private String publisher;
     private Date datePublication;
+    private int idBook;
 
-    public Book(String title, String author, String publisher, Date datePublication) {
+    public Book(String title, String author, String publisher, Date datePublication, int idBook) {
         this.title = title;
         this.author = author;
         this.publisher = publisher;
         this.datePublication = datePublication;
+        this.idBook = idBook;
     }
-    
-    
+
+     
 }

@@ -9,17 +9,13 @@ package com.gab.codigo.model;
  * @author eduar
  */
 public class User {
-    private String name;
-    private String cpf;
-    //private String password;
-    private String email;
+  private String cpf;
+  private String nome;
+  private String email;
 
-    public User(String name, String cpf, String email) {
-        this.name = name;
+    public User(String cpf, String nome, String email) {
         this.cpf = cpf;
+        this.nome = nome;
         this.email = email;
     }
-    
-    
-    
 }
