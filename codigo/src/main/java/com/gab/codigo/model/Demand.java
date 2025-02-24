@@ -24,4 +24,44 @@ public class Demand {
         this.loan = loan;
         this.idDemand = idDemand;
     }
+
+    public LocalDate getDataPedido() {
+        return dataPedido;
+    }
+
+    public void setDataPedido(LocalDate dataPedido) {
+        this.dataPedido = dataPedido;
+    }
+
+    public LocalDate getDataExpiracao() {
+        return dataExpiracao;
+    }
+
+    public void setDataExpiracao(LocalDate dataExpiracao) {
+        this.dataExpiracao = dataExpiracao;
+    }
+
+    public Client getClient() {
+        return client;
+    }
+
+    public void setClient(Client client) {
+        this.client = client;
+    }
+
+    public Book getLoan() {
+        return loan;
+    }
+
+    public void setLoan(Book loan) {
+        this.loan = loan;
+    }
+
+    public int getIdDemand() {
+        return idDemand;
+    }
+
+    public void setIdDemand(int idDemand) {
+        this.idDemand = idDemand;
+    }
 }
