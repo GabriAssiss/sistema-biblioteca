@@ -14,9 +14,9 @@ public class Adress {
     private int num;
     private String neighborhood;
     private String city;
-    private char[] state;
+    private String state;
 
-    public Adress(String cep, String street, int num, String neighborhood, String city, char[] state) {
+    public Adress(String cep, String street, int num, String neighborhood, String city, String state) {
         this.cep = cep;
         this.street = street;
         this.num = num;
