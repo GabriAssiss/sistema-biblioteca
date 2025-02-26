@@ -4,7 +4,7 @@
  */
 package com.gab.codigo.model;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 /**
  *
@@ -14,15 +14,15 @@ public class Book {
     private String title;
     private String author;
     private String publisher;
-    private Date datePublication;
-    private int idBook;
+    private LocalDate datePublication;
+    //private int idBook;
 
-    public Book(String title, String author, String publisher, Date datePublication, int idBook) {
+    public Book(String title, String author, String publisher, LocalDate datePublication/*, int idBook*/) {
         this.title = title;
         this.author = author;
         this.publisher = publisher;
         this.datePublication = datePublication;
-        this.idBook = idBook;
+        //this.idBook = idBook;
     }
 
     public String getTitle() {
@@ -49,21 +49,23 @@ public class Book {
         this.publisher = publisher;
     }
 
-    public Date getDatePublication() {
+    public LocalDate getDatePublication() {
         return datePublication;
     }
 
-    public void setDatePublication(Date datePublication) {
+    public void setDatePublication(LocalDate datePublication) {
         this.datePublication = datePublication;
     }
-
+    /*
     public int getIdBook() {
         return idBook;
     }
 
     public void setIdBook(int idBook) {
         this.idBook = idBook;
-    }
+    }*/
 
-     
+     public void bookRegister(Book book) {
+         
+     }
 }

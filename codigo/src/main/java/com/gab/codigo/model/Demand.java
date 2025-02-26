@@ -15,14 +15,14 @@ public class Demand {
     private LocalDate dataExpiracao;
     private Client client;
     private Book loan; 
-    private int idDemand; 
+    //private int idDemand; 
 
-    public Demand(LocalDate dataPedido, Client client, Book loan, int idDemand) {
+    public Demand(LocalDate dataPedido, Client client, Book loan/*, int idDemand*/) {
         this.dataPedido = dataPedido.now();
         this.dataExpiracao = dataPedido.plusDays(14);
         this.client = client;
         this.loan = loan;
-        this.idDemand = idDemand;
+        //this.idDemand = idDemand;
     }
 
     public LocalDate getDataPedido() {
@@ -56,12 +56,12 @@ public class Demand {
     public void setLoan(Book loan) {
         this.loan = loan;
     }
-
+    /*
     public int getIdDemand() {
         return idDemand;
     }
 
     public void setIdDemand(int idDemand) {
         this.idDemand = idDemand;
-    }
+    }*/
 }
