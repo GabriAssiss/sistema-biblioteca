@@ -4,6 +4,9 @@
  */
 package com.gab.codigo.view;
 
+import com.gab.codigo.controller.UserController;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author eduar
@@ -29,15 +32,15 @@ public class UserRegisterView extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jPasswordField1 = new javax.swing.JPasswordField();
+        jTextUserName = new javax.swing.JTextField();
+        jPassword = new javax.swing.JPasswordField();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jFormattedTextField1 = new javax.swing.JFormattedTextField();
+        jFormattedTextCpf = new javax.swing.JFormattedTextField();
         jLabel5 = new javax.swing.JLabel();
-        jPasswordField2 = new javax.swing.JPasswordField();
+        jPasswordConfirm = new javax.swing.JPasswordField();
         jLabel6 = new javax.swing.JLabel();
-        jTextField3 = new javax.swing.JTextField();
+        jTextEmail = new javax.swing.JTextField();
         jButton2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -46,12 +49,24 @@ public class UserRegisterView extends javax.swing.JFrame {
         jPanel1.setPreferredSize(new java.awt.Dimension(780, 540));
 
         jButton1.setText("Cadastrar");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jLabel1.setText("Nome de Usuário");
 
         jLabel2.setText("CPF");
 
         jLabel3.setText("Senha");
+
+        try {
+            jFormattedTextCpf.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("###.###.###-##")));
+        } catch (java.text.ParseException ex) {
+            ex.printStackTrace();
+        }
+        jFormattedTextCpf.setText("000.000.000-00");
 
         jLabel5.setText("Confirmar Senha");
 
@@ -68,10 +83,10 @@ public class UserRegisterView extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jButton2)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.DEFAULT_SIZE, 240, Short.MAX_VALUE)
-                            .addComponent(jFormattedTextField1)
-                            .addComponent(jPasswordField1)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jTextUserName, javax.swing.GroupLayout.DEFAULT_SIZE, 240, Short.MAX_VALUE)
+                            .addComponent(jFormattedTextCpf)
+                            .addComponent(jPassword)
                             .addComponent(jLabel1)
                             .addComponent(jButton1)
                             .addComponent(jLabel2)
@@ -80,13 +95,13 @@ public class UserRegisterView extends javax.swing.JFrame {
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(71, 71, 71)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jTextEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel6)
                                     .addComponent(jLabel5)))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jPasswordField2, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap(98, Short.MAX_VALUE))
+                                .addComponent(jPasswordConfirm, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addGap(98, 98, 98))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -94,23 +109,23 @@ public class UserRegisterView extends javax.swing.JFrame {
                 .addGap(132, 132, 132)
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jTextUserName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel6)
                     .addComponent(jLabel2))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jFormattedTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jFormattedTextCpf, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
                     .addComponent(jLabel3))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPasswordField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPasswordConfirm, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(48, 48, 48)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
@@ -131,6 +146,31 @@ public class UserRegisterView extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        
+        String cpf = jFormattedTextCpf.getText();
+        String name = jTextUserName.getText();
+        String email = jTextEmail.getText();
+        
+        boolean success;
+        
+         try {
+            UserController userController = new UserController();
+            
+            success = userController.userRegister(userController.formatterCpf(cpf), name, email);
+            if(success) {
+                JOptionPane.showMessageDialog(null, "Cadastro realizado com sucesso!");
+            }
+            else{
+                JOptionPane.showMessageDialog(null, "Os campos não foram preenchidos corretamente!");
+            }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Erro: " + e);
+        } 
+   
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -171,16 +211,16 @@ public class UserRegisterView extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
-    private javax.swing.JFormattedTextField jFormattedTextField1;
+    private javax.swing.JFormattedTextField jFormattedTextCpf;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPasswordField jPasswordField1;
-    private javax.swing.JPasswordField jPasswordField2;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField3;
+    private javax.swing.JPasswordField jPassword;
+    private javax.swing.JPasswordField jPasswordConfirm;
+    private javax.swing.JTextField jTextEmail;
+    private javax.swing.JTextField jTextUserName;
     // End of variables declaration//GEN-END:variables
 }
